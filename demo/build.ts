@@ -29,7 +29,7 @@ const src = assertNotNull(await readFileAsync(srcPath))
 const root = parse(html)
 
 // replace the `href`
-const codeEl = assertNotNull(root.querySelector('a#code')) as unknown as HTMLAnchorElement
+const codeEl = assertNotNull(root.querySelector('a#bookmarklet ')) as unknown as HTMLAnchorElement
 codeEl.setAttribute('href', `javascript:(function(){${ encodeURI(src) }})();`)
 
 console.log(root.outerHTML)
