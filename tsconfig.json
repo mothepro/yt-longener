@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "module": "commonjs",
+    "target": "es2017",
+    "module": "ES2022",
     "declaration": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "composite": false,
-    "outDir": "dist/npm",
+    "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,10 +14,12 @@
     "experimentalDecorators": true,
     "newLine": "lf",
     "allowSyntheticDefaultImports": true,
-    "inlineSources": true,
+    "inlineSources": false,
     "lib": [
-      "es2019"
-    ]
+      "es2022",
+      "DOM"
+    ],
+    "types": ["node"]
   },
   "exclude": [
     "dist"
