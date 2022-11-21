@@ -13,18 +13,20 @@
   ],
   "repository": "https://github.com/mothepro/yt-longener",
   "scripts": {
-    "build": "npm run build:npm && npm run build:esm",
     "pretest": "npm run build:npm",
     "test": "mocha -r should -r should-sinon dist/npm/test/*.js",
     "prerelease": "npm run build",
     "release": "np",
-    "build:npm": "tsc",
-    "build:esm": "tsc -p tsconfig.esm.json"
+    "prebuild": "tsc",
+    "build": "copyfiles demo/placeholder.html dist/ && node dist/demo/build.js 1> dist/demo/index.html"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.9",
     "@types/should-sinon": "^0.0.8",
+    "copyfiles": "^2.4.1",
     "mocha": "^10.1.0",
+    "node-html-parser": "^6.1.4",
     "np": "^7.6.2",
     "should": "^13.2.3",
     "should-sinon": "^0.0.6",
