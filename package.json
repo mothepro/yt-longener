@@ -1,6 +1,6 @@
 {
   "name": "yt-longener",
-  "description": "",
+  "description": "Convert youtube shorts link to a regular youtube video in one click",
   "author": "Maurice Prosper",
   "version": "0.0.0",
   "license": "Apache-2.0",
@@ -17,14 +17,17 @@
     "test": "mocha -r should -r should-sinon dist/npm/test/*.js",
     "prerelease": "npm run build",
     "release": "np",
+    "postrelease": "npm run deploy",
     "prebuild": "tsc",
-    "build": "copyfiles demo/placeholder.html dist/ && node dist/demo/build.js 1> dist/demo/index.html"
+    "build": "copyfiles demo/placeholder.html dist/ && node dist/demo/build.js 1> dist/demo/index.html",
+    "deploy": "gh-pages -d dist/demo"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
     "@types/should-sinon": "^0.0.8",
     "copyfiles": "^2.4.1",
+    "gh-pages": "^4.0.0",
     "mocha": "^10.1.0",
     "node-html-parser": "^6.1.4",
     "np": "^7.6.2",
