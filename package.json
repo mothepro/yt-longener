@@ -1,0 +1,34 @@
+{
+  "name": "yt-longener",
+  "description": "",
+  "author": "Maurice Prosper",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "main": "dist/npm/index.js",
+  "sideEffects": false,
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/mothepro/yt-longener",
+  "scripts": {
+    "build": "npm run build:npm && npm run build:esm",
+    "pretest": "npm run build:npm",
+    "test": "mocha -r should -r should-sinon dist/npm/test/*.js",
+    "prerelease": "npm run build",
+    "release": "np",
+    "build:npm": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "@types/should-sinon": "^0.0.8",
+    "mocha": "^10.1.0",
+    "np": "^7.6.2",
+    "should": "^13.2.3",
+    "should-sinon": "^0.0.6",
+    "sinon": "^14.0.2",
+    "typescript": "^4.9.3"
+  }
+}
