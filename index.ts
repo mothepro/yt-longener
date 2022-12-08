@@ -9,8 +9,9 @@ function assertNotNull<T>(expression: T, message?: string): NonNullable<T> {
 try {
   const { host, pathname } = location
   assert(host.includes('youtube.com'), 'Must be on youtube to use this bookmarklet')
+
   const [, id] = assertNotNull(
-    pathname.match(/shorts\/([a-zA-Z0-9_]+)/),
+    pathname.match(/shorts\/([a-zA-Z0-9_-]+)/),
     'Can not find youtube video id'
   )
 
