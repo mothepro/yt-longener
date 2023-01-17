@@ -1,6 +1,6 @@
 # Yt Longener
 
-> 
+>
 
 [![npm](https://img.shields.io/npm/v/yt-longener.svg)](https://www.npmjs.com/package/yt-longener)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/yt-longener)
@@ -26,7 +26,7 @@ Inline demo for webcomponents.org
 ```
 -->
 ```html
-<!-- 
+<!--
   Import the element.
 
   The `module` query parameter expands "bare" imports to full unpkg.com urls.
@@ -37,3 +37,6 @@ Inline demo for webcomponents.org
 
 
 ```
+
+
+For styling see <https://picocss.com/docs/customization.html>
