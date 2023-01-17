@@ -25,5 +25,4 @@ const root = parse(html);
 // replace the `href`
 const codeEl = assertNotNull(root.querySelector('a#bookmarklet'));
 codeEl.setAttribute('href', `javascript:(function(){${encodeURI(minifiedCode)}})();`);
-codeEl.setAttribute('poo', minifiedCode);
 console.log(root.outerHTML);

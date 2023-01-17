@@ -23,7 +23,7 @@
     <h1>Open YouTube shorts as a YouTube video</h1>
     <p>
       Drag
-      <a role="button" id="bookmarklet" href="javascript:(function(){%22use%20strict%22;function%20t(t,o=%22Assertion%20Error%22)%7Bif(!t)throw%20new%20Error(o)%7Dtry%7Bconst%7Bhost:e,pathname:r%7D=location;t(e.includes(%22youtube.com%22),%22Must%20be%20on%20youtube%20to%20use%20this%20bookmarklet%22);const%5B,n%5D=(t(null!=(o=r.match(/shorts%5C/(%5Ba-zA-Z0-9_-%5D+)/)),%22Can%20not%20find%20youtube%20video%20id%22),o);location.href=%60https://youtu.be/$%7Bn%7D%60%7Dcatch(o)%7Bt(o%20instanceof%20Error),alert(o.message)%7Dvar%20o;})();" poo="&quot;use strict&quot;;function t(t,o=&quot;Assertion Error&quot;){if(!t)throw new Error(o)}try{const{host:e,pathname:r}=location;t(e.includes(&quot;youtube.com&quot;),&quot;Must be on youtube to use this bookmarklet&quot;);const[,n]=(t(null!=(o=r.match(/shorts\\/([a-zA-Z0-9_-]+)/)),&quot;Can not find youtube video id&quot;),o);location.href=`https://youtu.be/${n}`}catch(o){t(o instanceof Error),alert(o.message)}var o;">YouTube unShort</a>
+      <a role="button" id="bookmarklet" href="javascript:(function(){%22use%20strict%22;function%20t(t,o=%22Assertion%20Error%22)%7Bif(!t)throw%20new%20Error(o)%7Dtry%7Bconst%7Bhost:e,pathname:r%7D=location;t(e.includes(%22youtube.com%22),%22Must%20be%20on%20youtube%20to%20use%20this%20bookmarklet%22);const%5B,n%5D=(t(null!=(o=r.match(/shorts%5C/(%5Ba-zA-Z0-9_-%5D+)/)),%22Can%20not%20find%20youtube%20video%20id%22),o);location.href=%60https://youtu.be/$%7Bn%7D%60%7Dcatch(o)%7Bt(o%20instanceof%20Error),alert(o.message)%7Dvar%20o;})();">YouTube unShort</a>
       to your bookmarks bar and click whenever a YouTube short is open.
     </p>
     <p>
@@ -34,7 +34,7 @@
         rel="noopener noreferrer"
       >this short</a>, it will work the same as the demo below.
     </p>
-    <video controls style="max-width: 100%">
+    <video controls autoplay muted loop style="max-width: 100%">
       <source type="video/mp4" src="sample.mp4">
     </video>
   </main>
